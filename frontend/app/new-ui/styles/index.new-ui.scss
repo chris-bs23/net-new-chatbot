@@ -1,0 +1,13 @@
+.chat-main {
+  display: flex;
+  flex-flow: row;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+
+  @import "quick-chat";
+  @import "chat-section";
+  @import "chat-warning";
+
+  @import "chat-popup";
+}

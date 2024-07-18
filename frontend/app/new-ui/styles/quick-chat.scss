@@ -1,0 +1,88 @@
+.quick-chat {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  max-width: 500px;
+  overflow: auto;
+  background: #F9F9F9;
+
+  .quickchat-item {
+  height: 107px;
+
+
+    .question-area{
+      text-align: center;
+      margin: auto;
+      padding: 20px;
+      color: #144654;
+    }
+  }
+
+  .left {
+    flex-direction: row-reverse;
+    height: 151px;
+
+    .question-area {
+      flex: 1;
+      color: #144654;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .image-area {
+      width: 48%;
+    }
+  }
+
+  .right {
+    height: 151px;
+
+    .question-area {
+      flex: 1;
+      color: #144654;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .image-area {
+      width: 47%;
+    }
+  }
+
+  .cover {
+    height: 239px;
+
+    .question-area {
+      z-index: 10;
+      position: absolute;
+      color: white;
+      width: 60%;
+    }
+
+    .textLeft{
+      left: 15px;
+    }
+
+    .textRight{
+      right: 15px;
+    }
+
+    .textTop{
+      top: 15px;
+    }
+
+    .textBottom{
+      bottom: 15px;
+    }
+
+
+
+    .image-area {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+
+}

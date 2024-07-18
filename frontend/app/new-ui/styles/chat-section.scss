@@ -1,0 +1,146 @@
+$chat-accent-color: #004d80;
+
+
+.chat-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .chat-header {
+    background: $chat-accent-color;
+  }
+
+  .messages {
+    flex-grow: 1; /* Allow messages to grow and take available space */
+    overflow-y: auto; /* Enable scrolling if messages overflow */
+    display: flex;
+    flex-direction: column; /* Display messages in a column */
+  }
+
+  .user {
+    display: flex;
+    flex-flow: row-reverse;
+
+    .message-container {
+      justify-content: end;
+      flex-flow: row-reverse;
+
+      .message-container-inner {
+        margin-left: 3rem;
+      }
+
+      .message-author {
+        text-align: right;
+        font-size: 1.1rem;
+        padding: 0;
+      }
+
+      .custom-markdown {
+        font-weight: 500;
+        padding: 0;
+      }
+
+
+      display: flex;
+      justify-content: flex-end;
+      flex-flow: row;
+      /* text-align: right; */
+    }
+  }
+
+
+  .assistant {
+
+    .message-container {
+
+      .message-container-inner {
+        margin-right: 3rem;
+
+      }
+
+      .message-author {
+        font-size: 1.1rem;
+        padding: 0;
+      }
+
+      .custom-markdown {
+        font-weight: 500;
+        padding: 0;
+      }
+
+    }
+  }
+
+
+  .message-container-inner {
+    a {
+      color: -webkit-link !important;
+      cursor: pointer !important;
+    }
+  }
+
+
+  .input-form {
+    display: flex;
+    flex-direction: column; /* Ensure the input form is displayed properly */
+
+    * {
+      border-radius: 1.25rem;
+    }
+
+    .input-area {
+      border-radius: 1.75rem;
+    }
+  }
+
+
+
+  .dot-flashing {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $chat-accent-color;
+    color: $chat-accent-color;
+    animation: dot-flashing 0.5s infinite linear alternate;
+    animation-delay: 0.25s;
+  }
+
+  .dot-flashing::before, .dot-flashing::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+
+  .dot-flashing::before {
+    left: -12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $chat-accent-color;
+    color: $chat-accent-color;
+    animation: dot-flashing 0.5s infinite alternate;
+    animation-delay: 0s;
+  }
+
+  .dot-flashing::after {
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $chat-accent-color;
+    color: $chat-accent-color;
+    animation: dot-flashing 0.5s infinite alternate;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes dot-flashing {
+    0% {
+      background-color: $chat-accent-color;
+    }
+    50%, 100% {
+      background-color: rgba(65, 107, 133, 0.2);
+    }
+  }
+}
